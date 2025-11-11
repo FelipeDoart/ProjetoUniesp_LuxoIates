@@ -1,0 +1,312 @@
+/* Mod - Página */
+
+:root {
+    --background: #fa0b0b;
+    --darkblue: #21272b;
+    --box: #21272bc9;
+    --lightblue: #1bb4e8;
+    --ocher: #c6b07f;
+    --footer: #CBCFD3;
+    --pagefont: 'Open Sans', sans-serif;
+}
+body {
+    background-color: #dbdbdb;
+}
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+
+}
+#geral {
+    background-color: rgb(255, 255, 255);
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.select{
+    color: var(--lightblue) !important;
+}
+header {
+    background-color: var(--darkblue);
+    position: fixed;
+    height: 90px;
+    width: 980px;
+    z-index: 1;
+}
+/* Menu de navegação */
+
+#topo-logo{
+    scale: 0.85;
+    position: relative;
+    right: 50px;
+}
+#topo-logo img{
+    scale : 1.2;
+    position: relative;
+    top: 15px;
+}
+#ttexto {
+    position: relative;
+    top: 5px;
+    right: 20px;
+}
+
+#menu {
+    position: relative;
+    bottom: 45px;
+
+}
+#menu ul {
+    
+    display: flex;
+    justify-content: flex-end;
+    scale: 0.93;
+}
+#menu li {
+    list-style: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-right: 1px solid white;
+}
+#menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#menu a:hover {
+    color: var(--lightblue);
+}
+/* ##PRINCIPAL## */
+#barco0 {
+    position: relative;
+}
+
+#topo {
+    background-color: #21272B;
+    height: 90px;
+
+}
+.div2 {
+    background-color: #EBEBEB;
+}
+h1 {font-size: 32px;
+    color: #1BB4E8;
+    font-family:'Times New Roman', Times, serif;    
+    position: relative;
+    left:  88px;
+    bottom: 60px;
+    display: inline;
+}
+h2 {font-size: 32px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    position: relative;
+    left: 10px;
+    bottom: 20px;
+    display: inline;
+}
+
+#propaganda {
+    position: relative;
+    bottom: 260px;
+    left: 550px;
+    background-color: rgba(26, 50, 67, 0.55);
+    width: 378px;
+    height: 179px;
+    
+}
+#prop {
+    transform: scale(1.5);
+    position: relative;
+    left: 120px;
+    top: 30px;
+}
+#textotl {
+    
+    transform: scale(1.1);
+    position: relative;
+    left: 70px;
+    top: 25px;
+}
+#tlf {
+    color:  #C6B07F;
+    position: relative;
+    left: 119px;
+    top: 8px;
+}
+#barco2 {
+    position: relative;
+    top: 65px;
+    width: 25px;
+    left: 18px;
+}
+#conjunto-tabela{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 170px;
+}
+.div4{
+    background-color: #1BB4E8 ;
+}
+#tabela1{
+    margin-left: 20px;
+    width: 455px;
+    height: 426px;
+}
+#destino {
+    display: flex;
+    position: relative;
+    width: 455px;
+}
+#tabela1-titulo h3 {
+    color: white;
+    font-family: serif;
+    font-style: italic;
+    font-size: 29px;
+    position: absolute;
+    top: 3px;
+    left: 45px;
+}
+p#tabela-titulo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p#textodestino {
+    margin-bottom: 40px;
+}
+#tabela2 {
+    margin-right: 20px;
+    margin-left: 20px;
+    
+    width: 455px;
+}
+.div5{
+    background-color: #C6B07F;
+}
+#tabela2-titulo{
+    display: flex;
+    position: relative;
+    width: 455px;
+    height: 45px;
+}
+h4 {
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    color: white;
+    font-family: serif;
+    font-style: italic;
+    font-size: 29px;
+}
+#titulofrota {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p#textofrota{
+    margin-bottom: 40px;
+}
+#frota {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+
+.asd {
+    width: 49.5%;
+    height: 110px;
+}
+
+/* CONTATO */
+
+.pgtitulo h3 {
+    text-align: center;
+    font: italic 700 2em var(--pagefont);
+    color: white;
+    position: relative;
+    bottom: 220px;
+}
+
+#imgCt {
+    position: relative;
+    width: 980px;
+    filter:brightness(60%);
+    opacity: 0.75;
+}
+
+form{
+   padding: 0 80px 20px;
+   max-width: 329px;
+   margin: 0 auto;
+}
+form div{
+    padding: 10px;
+}
+form label{
+    display: block;
+    font: italic 800 0.8em var(--pagefont);
+    color: var(--ocher);
+    cursor: text;
+    text-transform: uppercase;
+}
+.inputs{
+    width: 100%;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid;
+    font-family: var(--pagefont);
+}
+textarea{
+width: 100%;
+    resize: none;
+    margin-top: 3px;
+    padding: 5px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid;
+    font-family: var(--pagefont);
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 40px;
+}
+
+.buttons .button {
+    padding: 10px 20px;
+    border: none;
+    font: normal 600 0.7em var(--pagefont);
+    background-color: var(--darkblue);
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.button:hover {
+    background-color: var(--box);
+    cursor: pointer;
+}
+
+/* ADMINISTRAÇÃO */
+
+
+/* Footer */
+.div7{
+    background-color:rgba(226, 215, 215, 0.911);
+}
+#fundo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+

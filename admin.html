@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central do Admin</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+ <script src="js/jquery-3.6.4.min.js"></script>
+ <script src="js/api.js"></script>
+
+ <div id="geral">
+    <header>
+      <div id="topo" class="div1">
+        <div id="topo-logo">
+            <img id="timagem" src="imagens/barco1.png" alt="simbolo_iate">
+            <div id="ttexto">
+                <h1>Luxo</h1>
+                <h2>Aluguel de Iates</h2>
+            </div>
+            </div>
+            <div id="menu">
+              <ul>
+                <li><a href="index.html"> PÁGINA INICIAL</a></li>
+                <li><a href="Luxo_AL.html">ALUGUEL DE IATE</a></li>
+                <li><a href="Luxo_DT.html">DESTINO</a></li>
+                <li><a href="Luxo_TR.html">TRIPULAÇÃO</a></li>
+                <li><a href="Luxo_CT.html">CONTATO</a></li>
+                <li><a href="#" class="select" >ADMIN</a></li>
+              </ul>
+            </div>
+    </div>
+    </header>
+    
+
+    <div class="pgtitulo">
+      <img src="imagens/paisagemCt.jpg" alt="Praia" id="imgCt">
+      <h3>Administração</h3>
+    </div>
+
+    <form>
+      
+      <div class="entrect">
+        <label for="emailAd">Email</label>
+        <input type="email" name="" class = "inputs" id="emailAd">
+      </div>
+
+      <div class="entrect">
+        <label for="password">Senha</label>
+        <input type="int" name="" class = "inputs" id="password">
+      </div>   
+
+    </form>
+
+    <div class="buttons">
+      <button onclick="validarUsuario()" class="button">Acessar</button>
+    </div>
+
+    <footer>
+      <div class="div7">
+        <p id="fundo">©2023 por Luxo aluguel de iates</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
