@@ -84,10 +84,8 @@ function inserirMensagem() {
 // Com async/await e fetch API corrigido
 
 async function validarUsuario() {
-    // Exemplo de login válido (para teste):
     // email: admin@admin.com
     // senha: 1234
-
     const email = document.getElementById("emailAd").value.trim();
     const senha = document.getElementById("password").value.trim();
     //O método "trim()" remove espaços em branco do início e do fim da string.
@@ -102,21 +100,17 @@ async function validarUsuario() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(objLoginSenha)
         });
-
-        // Se o servidor não retornar 200 OK
         if (!resposta.ok) {
             throw new Error(`Erro HTTP: ${resposta.status}`);
         }
-
         const data = await resposta.json();
-
         // Aqui depende do formato do retorno da API:
         // Pode ser true, { valido: true }, ou { sucesso: true }
         if (data === true) {
             alert("✅ Login realizado com sucesso!");
+            localStorage.setItem("logado", "true");
             window.location.href = "mensagem.html";
         } else {alert("❌ Email ou senha incorretos!");}
-
     } catch (erro) {console.error("Erro ao validar usuário:", erro);
         alert("⚠️ Erro ao tentar validar o login. Tente novamente mais tarde.");}
 }
