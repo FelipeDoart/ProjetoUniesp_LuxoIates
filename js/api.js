@@ -81,3 +81,14 @@ async function validarUsuario() {
     } catch (erro) {console.error("Erro ao validar usuário:", erro);
         alert("⚠️ Erro ao tentar validar o login. Tente novamente mais tarde.");}
 }
+function checarLogin() {
+    const logado = localStorage.getItem("logado");
+    if (logado === "true") {
+        const acesso = document.getElementById("menu")
+        acesso.innerHTML += `<ul><li id="mens"><a href="mensagem.html">Área Administrativa</a></li></ul>`;
+        const exitBtn = document.getElementsByClassName("div1");
+        exitBtn[0].innerHTML += `<div id="exitbutton"><button class="button" onclick="desconectar()">Sair</button></div>`;
+    }}
+window.onload = function() {
+    checarLogin();
+}

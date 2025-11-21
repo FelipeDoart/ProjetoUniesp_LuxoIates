@@ -2,8 +2,10 @@ let logado = localStorage.getItem("logado");
 if (logado !== "true") {
     alert("⚠️ Você precisa estar logado para acessar esta página.");
     window.location.href = "admin.html";
-}else {
+}
+function desconectar() {
     localStorage.removeItem("logado");
+    window.location.href = "admin.html";
 }
 
 
@@ -18,20 +20,39 @@ function limparMensagensAntigas() {
     localStorage.setItem("mensagens", JSON.stringify(mensagens));
 }
 
+function getOld() {
+    return JSON.parse(localStorage.getItem("visualizadas")) || [];
+}
+function salvarOld(lista) {
+    localStorage.setItem("visualizadas", JSON.stringify(lista));
+}
+function NewMens(id) {
+    const visualizadas = getOld();
+    return !visualizadas.includes(id);
+}
+function marcarOld(id) {
+    const visualizadas = getOld();
+    if (!visualizadas.includes(id)) {
+        visualizadas.push(id);
+        salvarOld(visualizadas);
+    }
+}
 
 function renderizarMensagens() {
     const comentarios = document.getElementById("coms");
     //Pega as mensagens do localStorage
     const mensagens = JSON.parse(localStorage.getItem("mensagens")) || [];
     mensagens.forEach(element => {
+        const novo = NewMens(element.id);
         comentarios.innerHTML += `
-        <div class="comentario" id="comentario${element.id}">
+        <div class="comentario${novo ? "novo":"visto"}" id="comentario${element.id}">
             <p class ="nome">${element.nome}</p>
             <p class ="email"><b>Email:</b> ${element.email}</p>
             <p class ="coments">${element.mensagem}</p>
             <div onclick="" class="buttons"><buttons class="button" onclick="excluirMensagem(${element.id})">Excluir</buttons></div>
         </div>
         `;
+        marcarOld(element.id);
     });
 }
 
@@ -46,6 +67,8 @@ function excluirMensagem(id) {
     }
     window.location.reload();
 }
+
+
 
 window.onload = function() {
     limparMensagensAntigas();

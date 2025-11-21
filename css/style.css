@@ -56,7 +56,8 @@ header {
 
 #menu {
     position: relative;
-    bottom: 45px;
+    bottom: 67px;
+
 
 }
 #menu ul {
@@ -67,10 +68,12 @@ header {
 }
 #menu li {
     list-style: none;
+    padding-top: 7px;
     padding-left: 7px;
     padding-right: 7px;
     border-right: 1px solid white;
 }
+
 #menu a {
     color: white;
     text-decoration: none;
@@ -309,6 +312,21 @@ width: 100%;
 #comentario .button{
     margin-top: 10px;
 }
+#exitbutton {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    scale: 0.8;
+}
+#exitbutton .button {
+    padding: 8px 16px;
+    border: none;
+    font: normal 600 0.7em var(--pagefont);
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
 /* MENSAGENS */
 
 #coms {
@@ -318,14 +336,59 @@ width: 100%;
     background-color: rgba(226, 215, 215, 0.911);
     
 }
-#coms .comentario {
+/* NOVA mensagem */
+#coms .comentarionovo {
+    padding: 0 10px 10px;
+    margin: 20px auto;
+    max-width: 250px;
+    background-color: var(--darkblue);
+    border: solid 1px ;
+    /* background-color: #d4ffd6;
+    border: 2px solid #3cb371;
+    animation: fadeIn 0.8s ease-in-out; */
+}
+#coms .comentarionovo p.nome{
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    max-width: 250px;
+    background-color: var(--lightblue);
+    font-family: var(--pagefont);
+}
+#coms .comentarionovo p.email{
+    border-bottom: solid 1px ;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: white;
+    font-family: var(--pagefont);
+}
+#coms .comentarionovo p.coments{
+    border-bottom: solid 1px ;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: white;
+    font-family: var(--pagefont);
+}
+#coms .comentarionovo .buttons .button {
+    padding: 10px 20px;
+    border: none;
+    font: normal 600 0.7em var(--pagefont);
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+/* Mensagem já vista */
+#coms .comentariovisto {
     padding: 0 10px 10px;
     margin: 20px auto;
     max-width: 250px;
     background-color: white;
     border: solid 1px ;
+    /* background-color: #f0f0f0;
+    border: 1px solid #ccc; */
 }
-#coms .comentario p.nome{
+#coms .comentariovisto p.nome{
     text-align: center;
     font-weight: bold;
     margin: 10px;
@@ -333,11 +396,23 @@ width: 100%;
     background-color: var(--ocher);
     font-family: var(--pagefont);
 }
-#coms .comentario p.email,p.coments{
+
+#coms .comentariovisto p.email{
+    border-bottom: solid 1px ;
     margin-bottom: 10px;
     font-size: 0.9em;
     font-family: var(--pagefont);
+}
+#coms .comentariovisto p.coments{
     border-bottom: solid 1px ;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    font-family: var(--pagefont);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Footer */
