@@ -278,7 +278,16 @@ width: 100%;
     border-bottom: 1px solid;
     font-family: var(--pagefont);
 }
-.buttons {
+
+/* BOTÕES */
+
+#formCt .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 40px;
+}
+
+#formAdm .buttons {
     display: flex;
     justify-content: space-around;
     padding: 0 0 40px;
@@ -297,9 +306,39 @@ width: 100%;
     background-color: var(--box);
     cursor: pointer;
 }
+#comentario .button{
+    margin-top: 10px;
+}
+/* MENSAGENS */
 
-/* ADMINISTRAÇÃO */
-
+#coms {
+    padding: 10px;
+    max-width: 520px;
+    margin: 20px auto;
+    background-color: rgba(226, 215, 215, 0.911);
+    
+}
+#coms .comentario {
+    padding: 0 10px 10px;
+    margin: 20px auto;
+    max-width: 250px;
+    background-color: white;
+    border: solid 1px ;
+}
+#coms .comentario p.nome{
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    max-width: 250px;
+    background-color: var(--ocher);
+    font-family: var(--pagefont);
+}
+#coms .comentario p.email,p.coments{
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    font-family: var(--pagefont);
+    border-bottom: solid 1px ;
+}
 
 /* Footer */
 .div7{
